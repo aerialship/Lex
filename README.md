@@ -9,7 +9,7 @@ PHP implementation of Lexical Analyzer.
 
 > **Warning**
 > This is not a GENERATOR like classical lex is. It does not produce any php code. It's a simple plain scanner
-> of the given input string and tokenized into given set of tokens by matching regular expressions.
+> of the given input string and tokenizer into given set of tokens by matching regular expressions.
 > Thus, at runtime you can change the token definition and use one same code for any token set.
 
 
