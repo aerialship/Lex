@@ -1,0 +1,18 @@
+{
+    "name": "aerialship/abacus",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Milos Tomic",
+            "email": "tmilos@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/yaml": "~2.3",
+        "phpunit/phpunit": "~3.7"
+    }
+}

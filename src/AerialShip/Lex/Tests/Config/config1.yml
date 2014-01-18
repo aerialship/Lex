@@ -1,0 +1,7 @@
+
+\s:
+\d+: number
+\+: plus
+-: minus
+\*: mul
+/: div
