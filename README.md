@@ -1,4 +1,7 @@
 
+[![Build Status](https://travis-ci.org/aerialship/Lex.png?branch=master)](https://travis-ci.org/aerialship/Lex)
+
+
 Lex
 ====
 
