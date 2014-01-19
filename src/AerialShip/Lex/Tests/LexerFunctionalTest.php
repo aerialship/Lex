@@ -84,7 +84,7 @@ class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
     protected function assertTokens($arr)
     {
         $this->assertInternalType('array', $arr);
-        $this->assertCount(5, $arr);
+        $this->assertCount(6, $arr);
         $this->assertContainsOnlyInstancesOf('AerialShip\Lex\Token', $arr);
 
         $this->assertEquals('number', $arr[0]->getToken());
@@ -111,5 +111,9 @@ class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('567', $arr[4]->getValue());
         $this->assertEquals(15, $arr[4]->getOffset());
         $this->assertEquals(4, $arr[4]->getCount());
+
+        $this->assertInstanceOf('AerialShip\Lex\EOF', $arr[5]);
+        $this->assertEquals(18, $arr[5]->getOffset());
+        $this->assertEquals(5, $arr[5]->getCount());
     }
 }

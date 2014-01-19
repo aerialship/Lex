@@ -51,6 +51,7 @@ class Lexer
                 throw new UnknownTokenException($offset);
             }
         }
+        call_user_func($callback, new EOF($offset, $count));
     }
 
 
