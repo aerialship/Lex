@@ -10,7 +10,6 @@ class Lexer
     /** @var \AerialShip\Lex\Config\LexConfig  */
     protected $config;
 
-
     /**
      * @param LexConfig $config
      */
@@ -19,11 +18,9 @@ class Lexer
         $this->config = $config;
     }
 
-
-
     /**
-     * @param string $input
-     * @param callable $callback
+     * @param  string                                      $input
+     * @param  callable                                    $callback
      * @throws \AerialShip\Lex\Error\UnknownTokenException when unable to match a token from input string
      */
     public function tokenizeAsync($input, callable $callback)
@@ -54,20 +51,19 @@ class Lexer
         call_user_func($callback, new EOF($offset, $count));
     }
 
-
     /**
-     * @param string $input
+     * @param  string                                      $input
      * @return Token[]
      * @throws \AerialShip\Lex\Error\UnknownTokenException when unable to match a token from input string
      */
     public function tokenize($input)
     {
         $result = array();
-        $this->tokenizeAsync($input, function(Token $token) use (&$result) {
+        $this->tokenizeAsync($input, function (Token $token) use (&$result) {
             $result[] = $token;
         });
+
         return $result;
     }
 
-
-} 
+}

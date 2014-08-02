@@ -9,7 +9,6 @@ class YamlConfig implements ConfigProviderInterface
     /** @var  array */
     protected $config;
 
-
     public function __construct($yaml)
     {
         $this->config = Yaml::parse($yaml);
@@ -18,8 +17,9 @@ class YamlConfig implements ConfigProviderInterface
     /**
      * @return array
      */
-    public function toArray() {
+    public function toArray()
+    {
         return $this->config;
     }
 
-} 
+}

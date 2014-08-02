@@ -8,7 +8,6 @@ use AerialShip\Lex\Error\UnknownTokenException;
 use AerialShip\Lex\Lexer;
 use AerialShip\Lex\Token;
 
-
 class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
 {
     /**
@@ -23,7 +22,6 @@ class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
         $this->assertTokens($arr);
     }
 
-
     /**
      * @test
      */
@@ -33,13 +31,12 @@ class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer($config);
 
         $arr = array();
-        $lexer->tokenizeAsync(' 2131 + 33   / 567', function(Token $token) use (&$arr) {
+        $lexer->tokenizeAsync(' 2131 + 33   / 567', function (Token $token) use (&$arr) {
             $arr[] = $token;
         });
 
         $this->assertTokens($arr);
     }
-
 
     /**
      * @test
@@ -53,6 +50,7 @@ class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
             $lexer->tokenize(' 2131 + blabla');
         } catch (UnknownTokenException $ex) {
             $this->assertEquals(8, $ex->getOffset());
+
             return;
         }
 
@@ -68,15 +66,15 @@ class LexerFunctionalTest extends \PHPUnit_Framework_TestCase
         $lexer = new Lexer($config);
 
         try {
-            $lexer->tokenizeAsync(' 2131 + blabla', function($token) { });
+            $lexer->tokenizeAsync(' 2131 + blabla', function ($token) { });
         } catch (UnknownTokenException $ex) {
             $this->assertEquals(8, $ex->getOffset());
+
             return;
         }
 
         $this->fail('Expected UnknownTokenException');
     }
-
 
     /**
      * @param Token[] $arr

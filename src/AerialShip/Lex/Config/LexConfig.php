@@ -2,15 +2,13 @@
 
 namespace AerialShip\Lex\Config;
 
-use AerialShip\Lex\Config\TokenDefn;
-
 class LexConfig
 {
     /** @var TokenDefn[] */
     protected $tokens = array();
 
     /**
-     * @param array|ConfigProviderInterface $config
+     * @param  array|ConfigProviderInterface $config
      * @throws \InvalidArgumentException
      */
     public function __construct($config)
@@ -26,7 +24,6 @@ class LexConfig
         }
     }
 
-
     /**
      * @return TokenDefn[]
      */
@@ -34,7 +31,6 @@ class LexConfig
     {
         return $this->tokens;
     }
-
 
     public function add(TokenDefn $token)
     {
