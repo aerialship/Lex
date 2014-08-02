@@ -27,4 +27,4 @@ class TokenTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($count, $t->getCount());
     }
 
-} 
+}

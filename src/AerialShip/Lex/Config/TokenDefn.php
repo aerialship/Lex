@@ -10,10 +10,9 @@ class TokenDefn
     /** @var string  */
     protected $token;
 
-
     /**
-     * @param string $regex
-     * @param string $token
+     * @param  string                    $regex
+     * @param  string                    $token
      * @throws \InvalidArgumentException
      */
     public function __construct($regex, $token)
@@ -25,20 +24,20 @@ class TokenDefn
         }
     }
 
-
     /**
      * @return string
      */
-    public function getRegex() {
+    public function getRegex()
+    {
         return $this->regex;
     }
 
     /**
      * @return string
      */
-    public function getToken() {
+    public function getToken()
+    {
         return $this->token;
     }
 
-
-} 
+}

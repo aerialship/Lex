@@ -2,7 +2,6 @@
 
 namespace AerialShip\Lex\Config;
 
-
 class YamlFileConfig extends YamlConfig
 {
     public function __construct($file)
@@ -11,4 +10,4 @@ class YamlFileConfig extends YamlConfig
         parent::__construct($yaml);
     }
 
-} 
+}

@@ -2,7 +2,6 @@
 
 namespace AerialShip\Lex\Error;
 
-
 class UnknownTokenException extends \RuntimeException
 {
     /** @var  int */
@@ -17,10 +16,9 @@ class UnknownTokenException extends \RuntimeException
     /**
      * @return int
      */
-    public function getOffset() {
+    public function getOffset()
+    {
         return $this->offset;
     }
 
-
-
-} 
+}

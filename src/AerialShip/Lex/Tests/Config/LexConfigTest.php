@@ -45,4 +45,4 @@ class LexConfigTest extends \PHPUnit_Framework_TestCase
         $this->assertContainsOnlyInstancesOf('AerialShip\Lex\Config\TokenDefn', $arrTokens);
     }
 
-} 
+}

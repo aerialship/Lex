@@ -2,7 +2,6 @@
 
 namespace AerialShip\Lex;
 
-
 class Token
 {
     /** @var  string */
@@ -17,7 +16,6 @@ class Token
     /** @var  int */
     protected $count;
 
-
     public function __construct($token, $value, $offset, $count)
     {
         $this->token = $token;
@@ -29,34 +27,33 @@ class Token
     /**
      * @return int
      */
-    public function getCount() {
+    public function getCount()
+    {
         return $this->count;
     }
 
     /**
      * @return int
      */
-    public function getOffset() {
+    public function getOffset()
+    {
         return $this->offset;
     }
 
     /**
      * @return string
      */
-    public function getToken() {
+    public function getToken()
+    {
         return $this->token;
     }
 
     /**
      * @return string
      */
-    public function getValue() {
+    public function getValue()
+    {
         return $this->value;
     }
 
-
-
-
-
-
-} 
+}

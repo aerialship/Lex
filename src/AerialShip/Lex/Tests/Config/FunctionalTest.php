@@ -2,7 +2,6 @@
 
 namespace AerialShip\Lex\Tests\Config;
 
-
 use AerialShip\Lex\Config\LexConfig;
 use AerialShip\Lex\Config\YamlFileConfig;
 
@@ -37,4 +36,4 @@ class FunctionalTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('div', $arrTokens[5]->getToken());
 
     }
-} 
+}

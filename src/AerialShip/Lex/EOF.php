@@ -2,7 +2,6 @@
 
 namespace AerialShip\Lex;
 
-
 class EOF extends Token
 {
     public function __construct($offset, $count)
